@@ -140,7 +140,7 @@ export default function CalculatorApp() {
                 <>
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-4 bg-slate-50 p-3 rounded-xl border border-slate-100">
                     <span className="text-xs font-bold text-slate-500 uppercase">Selected Semester</span>
-                    <select value={semNo} onChange={(e) => setSemNo(Number(e.target.value))} className="w-full sm:w-auto bg-white border border-slate-200 rounded-lg px-3 py-1 text-sm font-black outline-none cursor-pointer">
+                    <select value={semNo} onChange={(e) => setSemNo(Number(e.target.value))} className="w-full sm:w-auto bg-white border border-slate-200 rounded-lg px-3 py-1 text-sm font-black text-black outline-none cursor-pointer">
                       {[1,2,3,4,5,6,7,8].map(n => <option key={n} value={n}>Semester {n}</option>)}
                     </select>
                   </div>
@@ -149,16 +149,16 @@ export default function CalculatorApp() {
                     <div key={course.id} className="flex flex-col sm:flex-row gap-3 p-3 sm:p-0 bg-slate-50 sm:bg-transparent rounded-xl border border-slate-100 sm:border-none animate-in slide-in-from-left-2">
                       <div className="w-full sm:flex-1">
                         <label className="block sm:hidden text-[10px] font-bold text-indigo-500 uppercase mb-1 ml-1">Course Name</label>
-                        <input type="text" value={course.name} placeholder="Course Name" className="w-full p-3 bg-white sm:bg-slate-50 rounded-xl outline-none focus:ring-2 focus:ring-indigo-400 border border-slate-200 sm:border-none shadow-sm sm:shadow-none" onChange={(e) => setCourses(courses.map(c => c.id === course.id ? {...c, name: e.target.value} : c))} />
+                        <input type="text" value={course.name} placeholder="Course Name" className="w-full p-3 bg-white sm:bg-slate-50 text-black rounded-xl outline-none focus:ring-2 focus:ring-indigo-400 border border-slate-200 sm:border-none shadow-sm sm:shadow-none" onChange={(e) => setCourses(courses.map(c => c.id === course.id ? {...c, name: e.target.value} : c))} />
                       </div>
                       <div className="flex gap-3 w-full sm:w-auto">
                         <div className="flex-1 sm:w-24">
                           <label className="block sm:hidden text-[10px] font-bold text-indigo-500 uppercase mb-1 ml-1 text-center">Score</label>
-                          <input type="number" value={course.score} placeholder="Score" className="w-full p-3 bg-white sm:bg-slate-100 rounded-xl text-center font-bold outline-none border border-slate-200 sm:border-none shadow-sm sm:shadow-none" onChange={(e) => setCourses(courses.map(c => c.id === course.id ? {...c, score: e.target.value} : c))} />
+                          <input type="number" value={course.score} placeholder="Score" className="w-full p-3 bg-white sm:bg-slate-100 text-black rounded-xl text-center font-bold outline-none border border-slate-200 sm:border-none shadow-sm sm:shadow-none" onChange={(e) => setCourses(courses.map(c => c.id === course.id ? {...c, score: e.target.value} : c))} />
                         </div>
                         <div className="flex-1 sm:w-20">
                           <label className="block sm:hidden text-[10px] font-bold text-indigo-500 uppercase mb-1 ml-1 text-center">Credits</label>
-                          <input type="number" value={course.credits} placeholder="Cr" className="w-full p-3 bg-white sm:bg-slate-50 rounded-xl text-center outline-none border border-slate-200 sm:border-none shadow-sm sm:shadow-none" onChange={(e) => setCourses(courses.map(c => c.id === course.id ? {...c, credits: e.target.value} : c))} />
+                          <input type="number" value={course.credits} placeholder="Cr" className="w-full p-3 bg-white sm:bg-slate-50 text-black rounded-xl text-center outline-none border border-slate-200 sm:border-none shadow-sm sm:shadow-none" onChange={(e) => setCourses(courses.map(c => c.id === course.id ? {...c, credits: e.target.value} : c))} />
                         </div>
                       </div>
                     </div>
